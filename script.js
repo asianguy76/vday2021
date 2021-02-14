@@ -81,4 +81,46 @@ window.onload = function (argument) {
 		}
 		return words;
 	}
+
+	//Heart animation
+
+	const endAngle = 226;
+	let canvasHeart = document.getElementById('c2');
+	canvasHeart.width = window.innerWidth;
+	canvasHeart.height = window.innerHeight;
+	let context = canvasHeart.getContext('2d');
+	let counter = 60;
+	let radius, tx, ty;
+	context.translate(tx, ty);
+	randomize();
+	requestAnimationFrame(animate);
+
+	function animate() {
+		let x, y;
+		if (counter <= endAngle) {
+			let radians = (Math.PI / 180) * counter;
+			y = radius * Math.sin(radians);
+			x = radius * Math.cos(radians);
+			context.fillRect(radius / 2 - x, -y, 2, 2);
+			context.fillRect(-radius / 2 + x, -y, 2, 2);
+		} else {
+			x = counter - endAngle - radius * 1.2;
+			y = counter - endAngle + radius * 0.71;
+			context.fillRect(x, y, 2, 2);
+			context.fillRect(-x, y, 2, 2);
+		}
+		counter = counter + 1;
+		if (counter >= endAngle + radius * 1.2) randomize();
+		requestAnimationFrame(animate);
+	}
+
+	function randomize() {
+		counter = 60;
+		context.fillStyle = 'rgba(255,' + Math.floor(Math.random() * 255) + ', 255 ,1)';
+		radius = Math.random() * 100;
+		context.translate(-tx, -ty);
+		tx = Math.random() * canvasHeart.width;
+		ty = Math.random() * canvasHeart.height;
+		context.translate(tx, ty);
+	}
 };
