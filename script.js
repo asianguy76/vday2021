@@ -1,6 +1,6 @@
 window.onload = function (argument) {
-	// var lyric = "i couldn't take it couldn't stand another minute couldn't bear another day without you in it";
-	var lyric = "Fate fell short this time. Your smile fades in the summer. Place your hands in mine, I'll leave when I wanna. Are we alone do you feel it. So lost and disillusioned. I haven't been this scared in a long time And I'm so unprepared so here's your valentine Bouquet of clumsy words, a simple melody This world's an ugly place, but you're so beautiful I'm still young I'm wasted and I'm not getting younger I'll grow up I promise that I'll grow up next summer I'm still young you plus me is euphoria I'm wasted, and I'm not getting younger I'll grow up I have sinned, don't help me, Jesus I promise that I'll grow up next summer";
+	// var lyric = "Fate fell short this time";
+	var lyric = 'fuck those kids from california and their rich ass sorry friends fuck their 16th birthday beamers and their dads who play in bands fuck the stratocaster creeper whos been classically trained he swears hes staring at his shoes i know hes lying to my face fuck the poser in the mirror shes a liar but i believe her inheritance its staring at me i never stood a chance ive been talking to the devil asking her what id have to spend im not quick to spill a secret but i know the truth to getting ahead inheritance would be awfully helpful but ill take what little i can get';
 	var words = {};
 	var words_attr = [];
 	string_handle(lyric);
